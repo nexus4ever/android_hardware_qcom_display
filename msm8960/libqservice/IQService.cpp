@@ -94,6 +94,7 @@ status_t BnQService::onTransact(
     const bool permission = (callerUid == AID_MEDIA ||
             callerUid == AID_GRAPHICS ||
             callerUid == AID_ROOT ||
+            callerUid == AID_CAMERASERVER ||
             callerUid == AID_SYSTEM);
 
     switch(code) {
