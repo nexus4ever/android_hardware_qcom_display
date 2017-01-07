@@ -1,4 +1,5 @@
-ifeq ($(call my-dir)/$(TARGET_BOARD_PLATFORM),$(call project-path-for,qcom-display))
+#Workaround: in my build environment this check always fails because "project-path-for,qcom-display" is undefined due to an unknown reason. In order to not freak out, just comment things out! :P
+#ifeq ($(call my-dir)/$(TARGET_BOARD_PLATFORM),$(call project-path-for,qcom-display))
 
 # TODO:  Find a better way to separate build configs for ADP vs non-ADP devices
 ifneq ($(TARGET_BOARD_AUTO),true)
@@ -37,4 +38,4 @@ ifneq ($(TARGET_BOARD_AUTO),true)
   endif
 endif
 
-endif
+#endif
